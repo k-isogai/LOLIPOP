@@ -1,49 +1,24 @@
+/* 縦・横 共通 */
 body {
-  padding: 17% 0;
   background: #ffffd9 url(../img/bg.png);
-  background-size: 24.5%;
+}
+
+/* search */
+.search-area {
+  padding-top: calc(64/375*100vw);
 }
 
 .search-area form {
   text-align: center;
 }
 
-.search-area input[type="text"] {
-  padding: 5px 5px 3px;
-  font-size: 16px;
-  border: 1px solid #D6D6D6;
-}
-
-.search-area input[type="text"]:focus {
-  background: #F9F9F9;
-}
-
-.search-result {
-  margin-top: 20px;
-}
-.hit-num__text span {
-  font-weight: bold;
-}
-#search-result__list {
-  margin-top: 15px;
-}
-#search-result__list span {
-  display: inline-block;
-  margin-right: 15px;
-  padding: 5px;
-  background: #F2F2F2;
-}
-
 /* table */
 table {
-  margin-top: 4%;
-  border-collapse: collapse;
-  background: #fff;
+  margin-top: calc(15/375*100vw);
 }
-table tr,
-table th,
-table td {
-  border: 1px solid #000;
+
+table * {
+  box-sizing: border-box;
 }
 
 table tr.hidden {
@@ -52,34 +27,146 @@ table tr.hidden {
 
 table th {
   color: #fff;
+  font-size: 8px;
   text-align: center;
   background: #f7852e;
   padding: 3px 10px;
 }
 
 table td {
+  font-size: 10px;
   padding: 2px 5px;
-}
-
-@media screen and (max-width:700px) {
-  #table {
-    overflow: scroll;
-  }
-  table th {
-    font-size: 8px;
-  }
-  table td {
-    font-size: 10px;
-  }
 }
 
 /* 縦表示 */
 @media screen and (orientation: portrait) {
-  table {
-    width: 200%;
+  body {
+    background-size: 25%;
+  }
+  /* search */
+  .search-area {
+    padding-top: calc(20/375*100vw);
+  }
+  .search-area input[type="text"] {
+    width: 60%;
+    padding: calc(5/375*100vw);
+    font-size: calc(20/375*100vw);
+    border: 1px solid #D6D6D6;
+  }
+  table,
+  table * {
+    display: block;
+    width: 100%;
+  }
+  table thead tr {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffd9;
+    border: 5px solid #ffffd9;
+  }
+  table thead tr th {
+    width: 50%;
+    font-size: calc(12/375*100vw);
+    border: 1px solid #ffffd9;
+    border-radius: 10px;
+  }
+  table tbody tr {
+    border: 10px solid #ffffd9;
+    background: #fff;
+  }
+  table tbody tr td {
+    min-height: 1.6em;
+    font-size: calc(12/375*100vw);
+  }
+  table tbody tr td:nth-child(even) {
+    background: #f6e9e0;
+  }
+  table tbody tr td:nth-child(1)::before {
+    content: '分類：';
+  }
+  table tbody tr td:nth-child(2)::before {
+    content: 'メーカー：';
+  }
+  table tbody tr td:nth-child(3)::before {
+    content: '商品名：';
+  }
+  table tbody tr td:nth-child(4)::before {
+    content: '1個(g)：';
+  }
+  table tbody tr td:nth-child(5)::before {
+    content: '備考：';
+  }
+  table tbody tr td:nth-child(6)::before {
+    content: '含有量(mg)：';
+  }
+  table tbody tr td:nth-child(7)::before {
+    content: 'レベル：';
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 横表示 */
 @media screen and (orientation: landscape) {
+  body {
+    background-size: 20%;
+  }
+
+  /* search */
+  .search-area {
+    padding-top: calc(18/375*100vw);
+  }
+  .search-area input[type="text"] {
+    padding: calc(5/375*100vw);
+    font-size: calc(16/375*100vw);
+    border: 1px solid #D6D6D6;
+  }
+
+  #table {
+    overflow: scroll;
+  }
+  table {
+    border-collapse: collapse;
+    background: #fff;
+  }
+  table tr,
+  table th,
+  table td {
+    border: 1px solid #000;
+  }
 }
