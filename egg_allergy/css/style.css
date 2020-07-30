@@ -39,7 +39,7 @@ table td {
 }
 
 /* 縦表示 */
-@media screen and (orientation: portrait) {
+/* @media screen and (orientation: portrait) { */
   body {
     background-size: 25%;
   }
@@ -102,7 +102,7 @@ table td {
   table tbody tr td:nth-child(7)::before {
     content: 'レベル：';
   }
-}
+/* } */
 
 
 
@@ -142,12 +142,12 @@ table td {
 
 
 /* 横表示 */
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) {
   body {
     background-size: 20%;
   }
 
-  /* search */
+  /search/
   .search-area {
     padding-top: calc(18/375*100vw);
   }
@@ -169,4 +169,4 @@ table td {
   table td {
     border: 1px solid #000;
   }
-}
+} */
