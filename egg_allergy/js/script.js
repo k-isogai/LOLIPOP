@@ -3,7 +3,7 @@ $(function () {
 	//JSON取得
 	$.ajax({
 		type: "get",
-		url: "/egg_allergy/json/list.json",
+		url: "/egg_allergy/json/list.json?v=2020730",
 		dataType: "json"
 	})
 	.done((data) => {
@@ -50,11 +50,9 @@ $(function () {
 		var searchText = $(this).val().split(/,|、|\s/g);
 		var targetText;
 		var check = new Array();
-		console.log(searchText);
 
 		$('#table tbody tr').each(function() {
 			targetText = $(this).find('td').text();
-			console.log(targetText);
 
 			//キーワード数分岐
 			if(searchText.length === 1) {
