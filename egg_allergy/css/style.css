@@ -70,6 +70,10 @@ table td {
     border: 1px solid #ffffd9;
     border-radius: 10px;
   }
+  table tbody {
+    height: 50vh;
+    overflow: scroll;
+  }
   table tbody tr {
     border: 10px solid #ffffd9;
     background: #fff;
